@@ -1,1 +1,129 @@
-fffffff
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashstream</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        header {
+            text-align: right;
+            padding: 10px;
+        }
+        
+        select, button {
+            padding: 5px;
+            margin: 5px;
+        }
+        
+        h1 {
+            color: #0094fd;
+            font-size: 40px;
+            margin-top: 50px;
+        }
+        
+        h2 {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        
+        p {
+            font-size: 18px;
+            margin: 15px 0;
+        }
+        
+        form {
+            margin: 20px auto;
+            max-width: 500px;
+        }
+        
+        input {
+            padding: 10px;
+            width: 300px;
+            margin: 10px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background-color: #0094fd;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        
+        .modal-content {
+            background-color: #222;
+            margin: 100px auto;
+            padding: 20px;
+            width: 300px;
+            border-radius: 5px;
+        }
+        
+        .modal input {
+            width: 90%;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <select>
+            <option>Español</option>
+            <option>English</option>
+        </select>
+        <button onclick="mostrarRegistro()">Sign In</button>
+    </header>
+    
+    <h1>DASHSTREAM</h1>
+    <h2>Unlimited Movies TV, Shows and More.</h2>
+    <p>Watch anywhere and cancel anytime.</p>
+    
+    <p>Ready to watch? Enter your email to create or restart your membership.</p>
+    
+    <form>
+        <input type="email" placeholder="Email Address" required>
+        <button type="submit">Get Started ></button>
+    </form>
+
+    <div class="modal" id="modalRegistro">
+        <div class="modal-content">
+            <h2>Registro</h2>
+            <form>
+                <input type="text" placeholder="Nombre completo" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Contraseña" required>
+                <button type="submit">Registrarse</button>
+            </form>
+            <button onclick="cerrarRegistro()">Cerrar</button>
+        </div>
+    </div>
+
+    <script>
+        function mostrarRegistro() {
+            document.getElementById("modalRegistro").style.display = "block";
+        }
+        
+        function cerrarRegistro() {
+            document.getElementById("modalRegistro").style.display = "none";
+        }
+    </script>
+</body>
+</html>
